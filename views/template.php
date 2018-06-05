@@ -12,7 +12,15 @@
 </head>
 
 <body>
-    <?php require_once 'templates/nav-deslogado.php'; ?>
+
+    <?php
+        if(isset($_SESSION['id']) && !empty($_SESSION['id'])) {
+             require_once 'templates/nav-logado.php';
+        } else {
+            require_once 'templates/nav-deslogado.php';
+        }
+    ?>
+
 
     <?php $this->loadViewInTemplate($viewName, $viewData) ?>
 

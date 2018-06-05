@@ -17,10 +17,10 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= BASE_URL; ?>/login">Login</a>
+                        <a class="nav-link" href="<?= BASE_URL; ?>/login">Meu perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= BASE_URL; ?>/register">Register</a>
+                        <a class="nav-link" href="<?= BASE_URL; ?>/login/sair">Sair</a>
                     </li>
                 </ul>
             </div>

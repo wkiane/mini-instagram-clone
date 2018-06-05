@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 05-Jun-2018 às 00:28
+-- Generation Time: 05-Jun-2018 às 20:14
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -43,11 +43,36 @@ CREATE TABLE `fotos` (
 INSERT INTO `fotos` (`id`, `titulo`, `url`, `created_at`, `user_id`) VALUES
 (1, 'Happy Couple', 'foto-1.jpeg', '2018-06-03 19:14:22', 1),
 (2, 'Notebook Code', 'foto-2.jpeg\r\n', '2018-06-03 19:15:02', 1),
-(4, 'Sky', 'c0967f49050425f2f3d8732d4e6fae4b.jpeg', '2018-06-04 18:11:03', 0),
-(5, 'Woman', 'da24a762b8f00307f877c193a3c33995.jpeg', '2018-06-04 18:26:39', 0),
-(6, 'PC', 'ea973e636843912f292a9e632ce036ec.jpeg', '2018-06-04 18:28:35', 0),
-(7, 'Girl', '9e07abd007d1e880c399ebf79bf4c261.jpeg', '2018-06-04 18:29:25', 0),
-(8, ' sneakers', '96aa3b33784484222f6d39a1184c52d9.jpeg', '2018-06-04 18:34:46', 0);
+(4, 'Sky', 'c0967f49050425f2f3d8732d4e6fae4b.jpeg', '2018-06-04 18:11:03', 1),
+(5, 'Woman', 'da24a762b8f00307f877c193a3c33995.jpeg', '2018-06-04 18:26:39', 1),
+(6, 'PC', 'ea973e636843912f292a9e632ce036ec.jpeg', '2018-06-04 18:28:35', 1),
+(7, 'Girl', '9e07abd007d1e880c399ebf79bf4c261.jpeg', '2018-06-04 18:29:25', 1),
+(8, ' sneakers', '96aa3b33784484222f6d39a1184c52d9.jpeg', '2018-06-04 18:34:46', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  `create_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `email`, `nome`, `senha`, `create_at`) VALUES
+(1, 'willa@gmail.com', 'willa', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-04 23:42:37'),
+(2, 'laryssa@contato.com', 'laryssa', '25d55ad283aa400af464c76d713c07ad', '2018-06-05 01:56:43'),
+(3, 'darcy_vovolinda@gmail.com', 'Darcy', 'e10adc3949ba59abbe56e057f20f883e', '2018-06-05 02:04:17'),
+(4, 'guilherme_danki@outlook.com', 'guilherme', 'e10adc3949ba59abbe56e057f20f883e', '2018-06-05 02:07:10'),
+(5, 'andressa@gmail.com', 'Andressa', 'e10adc3949ba59abbe56e057f20f883e', '2018-06-05 15:06:41');
 
 --
 -- Indexes for dumped tables
@@ -60,6 +85,12 @@ ALTER TABLE `fotos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -68,6 +99,12 @@ ALTER TABLE `fotos`
 --
 ALTER TABLE `fotos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
