@@ -8,7 +8,7 @@
 
             if(isset($_POST['enviar'])) {
                 $this->email = $_POST['email'];
-                $this->senha = md5($_POST['senha']); 
+                $this->senha = md5($_POST['senha']);
             }
 
             $this->logar();

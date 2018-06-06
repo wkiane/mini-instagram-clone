@@ -16,26 +16,30 @@
                     if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
                         $titulo = $_POST['titulo'];
                     };
+                    
+                    $user_id = $_SESSION['id'];
 
-                    $this->insert($titulo, $nome);
-                    header("Location: index");
+                    $this->insert($titulo, $nome, $user_id);
+                    $location = BASE_URL.'/';
+                    header("Location: $location");
                     die();
                 }
             }
         }
 
-        public function insert($titulo, $nome) {
-            $sql = "INSERT INTO fotos SET titulo = :titulo, url = :nome";
+        public function insert($titulo, $nome, $user_id) {
+            $sql = "INSERT INTO fotos SET titulo = :titulo, `url` = :nome, `user_id` = :user_id";
             $sql = $this->db->prepare($sql);
             $sql->bindParam(':titulo', $titulo);
             $sql->bindParam(':nome', $nome);
+            $sql->bindParam(':user_id', $user_id);
             $sql->execute();
         }
 
         public function getFotos() {
             $array= [];
-
-            $sql = "SELECT * FROM fotos ORDER BY id DESC";
+            
+            $sql = "SELECT u.nome, u.id, f.url, f.created_at, f.titulo FROM usuarios AS u JOIN fotos AS f ON u.id = f.user_id ORDER BY f.id DESC";
             $sql = $this->db->prepare($sql);
             $sql->execute();
 
@@ -45,5 +49,4 @@
 
             return $array;
         }
-
     }

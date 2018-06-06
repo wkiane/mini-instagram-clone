@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Galeria de Fotos - Feed</title>
+    <title>Galeria de Fotos</title>
     <link rel="stylesheet" href="<?= BASE_URL; ?>/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= BASE_URL; ?>/assets/css/bootswatch.lux.min.css">
     <link rel="stylesheet" href="<?= BASE_URL; ?>/assets/css/style.css">
+    <link rel="shortcut icon" href="<?= BASE_URL; ?>/assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>

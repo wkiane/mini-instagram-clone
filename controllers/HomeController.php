@@ -10,9 +10,16 @@ class HomeController extends Controller {
     }
 
     public function addFoto() {
+        $location = BASE_URL.'/login';
         $dados = [];
+
         $fotos = new Fotos();
+        if (empty($_SESSION['id'])) {
+            header("Location: $location");
+        }
+
         $fotos->saveFotos();
+
         $this->loadTemplate('addFoto', $dados);
     }
 

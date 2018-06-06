@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 05-Jun-2018 às 20:14
+-- Generation Time: 06-Jun-2018 às 02:10
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -46,8 +46,11 @@ INSERT INTO `fotos` (`id`, `titulo`, `url`, `created_at`, `user_id`) VALUES
 (4, 'Sky', 'c0967f49050425f2f3d8732d4e6fae4b.jpeg', '2018-06-04 18:11:03', 1),
 (5, 'Woman', 'da24a762b8f00307f877c193a3c33995.jpeg', '2018-06-04 18:26:39', 1),
 (6, 'PC', 'ea973e636843912f292a9e632ce036ec.jpeg', '2018-06-04 18:28:35', 1),
-(7, 'Girl', '9e07abd007d1e880c399ebf79bf4c261.jpeg', '2018-06-04 18:29:25', 1),
-(8, ' sneakers', '96aa3b33784484222f6d39a1184c52d9.jpeg', '2018-06-04 18:34:46', 1);
+(7, 'Girl', '9e07abd007d1e880c399ebf79bf4c261.jpeg', '2018-06-04 18:29:25', 2),
+(8, ' sneakers', '96aa3b33784484222f6d39a1184c52d9.jpeg', '2018-06-04 18:34:46', 2),
+(9, 'Woman', 'f77fcb86e72f6ceaadba5273120a9a84.jpeg', '2018-06-05 20:00:42', 2),
+(10, 'NaN', '9ab2a0ff6abb39626953228b7ecfdfb8.jpeg', '2018-06-05 20:05:10', 3),
+(11, 'Meal', 'b75486d21f4ee5d11766d706ef2d3cb1.jpeg', '2018-06-05 20:11:12', 3);
 
 -- --------------------------------------------------------
 
@@ -69,10 +72,12 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `email`, `nome`, `senha`, `create_at`) VALUES
 (1, 'willa@gmail.com', 'willa', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-04 23:42:37'),
-(2, 'laryssa@contato.com', 'laryssa', '25d55ad283aa400af464c76d713c07ad', '2018-06-05 01:56:43'),
-(3, 'darcy_vovolinda@gmail.com', 'Darcy', 'e10adc3949ba59abbe56e057f20f883e', '2018-06-05 02:04:17'),
-(4, 'guilherme_danki@outlook.com', 'guilherme', 'e10adc3949ba59abbe56e057f20f883e', '2018-06-05 02:07:10'),
-(5, 'andressa@gmail.com', 'Andressa', 'e10adc3949ba59abbe56e057f20f883e', '2018-06-05 15:06:41');
+(2, 'laryssa@contato.com', 'laryssa', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 01:56:43'),
+(3, 'darcy_vovolinda@gmail.com', 'Darcy', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 02:04:17'),
+(4, 'guilherme_danki@outlook.com', 'guilherme', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 02:07:10'),
+(5, 'andressa@gmail.com', 'Andressa', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 15:06:41'),
+(12, 'giovanni@contato.com', 'giovanni', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 18:01:46'),
+(15, 'maria@contato.com', 'Maria', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 18:03:46');
 
 --
 -- Indexes for dumped tables
@@ -98,13 +103,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `fotos`
 --
 ALTER TABLE `fotos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

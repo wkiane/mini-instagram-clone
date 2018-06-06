@@ -1,3 +1,7 @@
 .home .container {
     max-width: 880px;
 }
+
+.bigger {
+    font-size: 1.4em;
+}

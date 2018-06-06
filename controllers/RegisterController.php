@@ -5,10 +5,11 @@
             $location = BASE_URL . '/login';
             $dados = [];
             $register = new Register();
-            $register->getDados();
-            $register->validacao();
-            $register->insert();
             if(isset($_POST['enviar'])) {
+                $register->getDados();
+                $register->validacao();
+                $register->toCripto();
+                $register->insert();
                 header("Location: $location");
             }
             $this->loadTemplate('register', $dados);

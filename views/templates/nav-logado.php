@@ -17,7 +17,7 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= BASE_URL; ?>/login">Meu perfil</a>
+                        <a class="nav-link" href="<?= BASE_URL; ?>/perfil">Meu perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= BASE_URL; ?>/login/sair">Sair</a>

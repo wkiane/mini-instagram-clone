@@ -14,12 +14,13 @@
         </div>
 
         <div class="form-group">
-            <input type="password" class="form-control" name="senha" placeholder="Senha">
+            <input type="password" class="form-control" name="senha" placeholder="Senha">            
         </div>
 
         <div class="form-group">
             <input type="password" class="form-control" name="senha2" placeholder="Comfirmar Senha">            
         </div>
+
         <input type="submit" name="enviar" value="Criar conta" class="btn btn-primary float-left">
         <a href="<?= BASE_URL; ?>/login" class="btn btn-secondary float-right">Logar</a>
     </form>
