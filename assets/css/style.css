@@ -1,7 +1,73 @@
+@media screen and (max-width:  768px) {
+    .profile-info {
+        /* width: 100%; */
+        margin: 0 20px 20px!important;
+    }
+    .img-profile {
+        margin: 2.5em auto;
+    }
+
+    .text-left {
+        text-align: center!important;
+    }
+}
+
+.pic {
+    max-width: 280px;
+    min-width: 280px;
+}
+
+.img-container {
+    max-width: 900px;
+}
+
+
+.bg-color {
+    background-color: #f1f1f1;
+}
+
+.form-control, .form-control:focus {
+    background-color: #fcfcfc;
+}
+
 .home .container {
     max-width: 880px;
 }
 
+ .profile .container { 
+     max-width: 1280px; 
+ } 
+
+
 .bigger {
     font-size: 1.4em;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-info {
+    margin-top: 5em;
+    margin-left: 4em;
+}
+
+
+.in-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.object-fit {
+    display: inline-block;
+    object-fit: cover;
+    margin-bottom: 5px;
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+}
+
+.col-centered{
+    margin: 0 auto;
 }

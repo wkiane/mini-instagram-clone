@@ -1,7 +1,6 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Galeria</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04"
-                aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="<?=BASE_URL?>/home"><i class="fa fa-instagram"></i> Instagram</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -17,7 +16,7 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= BASE_URL; ?>/perfil">Meu perfil</a>
+                        <a class="nav-link" href="<?= BASE_URL; ?>/profile">Meu perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= BASE_URL; ?>/login/sair">Sair</a>

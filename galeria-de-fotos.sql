@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 06-Jun-2018 às 02:10
+-- Generation Time: 08-Jun-2018 às 06:02
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -50,7 +50,11 @@ INSERT INTO `fotos` (`id`, `titulo`, `url`, `created_at`, `user_id`) VALUES
 (8, ' sneakers', '96aa3b33784484222f6d39a1184c52d9.jpeg', '2018-06-04 18:34:46', 2),
 (9, 'Woman', 'f77fcb86e72f6ceaadba5273120a9a84.jpeg', '2018-06-05 20:00:42', 2),
 (10, 'NaN', '9ab2a0ff6abb39626953228b7ecfdfb8.jpeg', '2018-06-05 20:05:10', 3),
-(11, 'Meal', 'b75486d21f4ee5d11766d706ef2d3cb1.jpeg', '2018-06-05 20:11:12', 3);
+(11, 'Meal', 'b75486d21f4ee5d11766d706ef2d3cb1.jpeg', '2018-06-05 20:11:12', 3),
+(12, 'Lorena 2018 gatinha', 'e3b47e70e8d3d23740f125dabcc9c1ff.jpeg', '2018-06-06 20:03:03', 16),
+(13, 'Coca cola', '07b25c4bd4adc8beb82c751afc564502.jpeg', '2018-06-07 18:36:22', 17),
+(15, 'Motobike', '6aa5bdfa884a60c00066c235de1ebcd4.jpeg', '2018-06-07 23:19:18', 18),
+(16, 'Beautiful view', 'bb86077a592c1d8d09b61a036a68bee3.jpeg', '2018-06-07 23:19:59', 18);
 
 -- --------------------------------------------------------
 
@@ -63,21 +67,26 @@ CREATE TABLE `usuarios` (
   `email` varchar(255) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
-  `create_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `descricao` text NOT NULL,
+  `url_foto` varchar(255) NOT NULL DEFAULT 'user.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `email`, `nome`, `senha`, `create_at`) VALUES
-(1, 'willa@gmail.com', 'willa', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-04 23:42:37'),
-(2, 'laryssa@contato.com', 'laryssa', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 01:56:43'),
-(3, 'darcy_vovolinda@gmail.com', 'Darcy', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 02:04:17'),
-(4, 'guilherme_danki@outlook.com', 'guilherme', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 02:07:10'),
-(5, 'andressa@gmail.com', 'Andressa', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 15:06:41'),
-(12, 'giovanni@contato.com', 'giovanni', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 18:01:46'),
-(15, 'maria@contato.com', 'Maria', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 18:03:46');
+INSERT INTO `usuarios` (`id`, `email`, `nome`, `senha`, `create_at`, `descricao`, `url_foto`) VALUES
+(1, 'willa@gmail.com', 'willa kiane', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-04 23:42:37', 'sou uma pessoa que gosta muito de ser feliz eh isto\r\n', 'c4ca4238a0b923820dcc509a6f75849b.jpeg'),
+(2, 'laryssa@contato.com', 'laryssa\r\n', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 01:56:43', '', 'user.png'),
+(3, 'darcy_vovolinda@gmail.com', 'darcy', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 02:04:17', '', 'user.png'),
+(4, 'guilherme_danki@outlook.com', 'guilherme', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 02:07:10', '', 'user.png'),
+(5, 'andressa@gmail.com', 'andressa', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 15:06:41', '', 'user.png'),
+(12, 'giovanni@contato.com', 'giovanni', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 18:01:46', '', 'user.png'),
+(15, 'maria@contato.com', 'maria', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-05 18:03:46', '', 'user.png'),
+(16, 'lorena2018@gmail.com', 'lorena', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-06 20:02:21', '', 'user.png'),
+(17, 'paulo_abreu@gmail.com', 'paulo abreu sardinha', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-07 18:35:41', 'Vovô da treta', '70efdf2ec9b086079795c442636b55fb.jpeg'),
+(18, 'joedoe@gmail.com', 'john doe', '81dc9bdb52d04dc20036dbd8313ed055', '2018-06-07 23:13:53', 'Hi, my name is John I\'m from NY and more things about me written here lorem ipsum ipsum.', '6f4922f45568161a8cdf4ad2299f6d23.jpeg');
 
 --
 -- Indexes for dumped tables
@@ -103,13 +112,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `fotos`
 --
 ALTER TABLE `fotos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
